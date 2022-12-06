@@ -1,0 +1,356 @@
+[33mcommit 610a9711c150ca08f250cfbc2bb9885aced69fce[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: SaintDavid <agustinlozanoxdxd@gmail.com>
+Date:   Tue Dec 6 02:05:17 2022 -0300
+
+    Proyecto Crudo de ASP.NET Sistema de Gestion basico
+
+ .../config/applicationhost.config                  |  1024 [32m++[m
+ .vs/Sistema_VB_Backup/v16/.suo                     |   Bin [31m0[m -> [32m70656[m bytes
+ Default.aspx                                       |  1356 [32m+++[m
+ Default.aspx.designer.vb                           |  1590 [32m+++[m
+ Default.aspx.vb                                    |  1138 [32m++[m
+ Defaultraro.aspx                                   |  2173 [32m++++[m
+ Defaultraro.aspx.designer.vb                       |  2193 [32m++++[m
+ Defaultraro.aspx.vb                                |  2342 [32m++++[m
+ My Project/Application.Designer.vb                 |    12 [32m+[m
+ My Project/Application.myapp                       |    10 [32m+[m
+ My Project/AssemblyInfo.vb                         |    34 [32m+[m
+ My Project/MyExtensions/MyWebExtension.vb          |    73 [32m+[m
+ My Project/Resources.Designer.vb                   |    61 [32m+[m
+ My Project/Resources.resx                          |   117 [32m+[m
+ My Project/Settings.Designer.vb                    |    72 [32m+[m
+ My Project/Settings.settings                       |     7 [32m+[m
+ Sistema_VB_Backup.sln                              |    25 [32m+[m
+ Sistema_VB_Backup.vbproj                           |   335 [32m+[m
+ Sistema_VB_Backup.vbproj.user                      |    38 [32m+[m
+ Web.Debug.config                                   |    22 [32m+[m
+ Web.Release.config                                 |    23 [32m+[m
+ Web.config                                         |    40 [32m+[m
+ ...ft.CodeDom.Providers.DotNetCompilerPlatform.dll |   Bin [31m0[m -> [32m40168[m bytes
+ ...ft.CodeDom.Providers.DotNetCompilerPlatform.xml |    67 [32m+[m
+ bin/Sistema_VB_Backup.dll                          |   Bin [31m0[m -> [32m114176[m bytes
+ bin/Sistema_VB_Backup.dll.config                   |    40 [32m+[m
+ bin/Sistema_VB_Backup.pdb                          |   Bin [31m0[m -> [32m99840[m bytes
+ bin/Sistema_VB_Backup.xml                          |  2219 [32m++++[m
+ bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll  |   Bin [31m0[m -> [32m105392[m bytes
+ bin/roslyn/Microsoft.CSharp.Core.targets           |   145 [32m+[m
+ .../Microsoft.CodeAnalysis.CSharp.Scripting.dll    |   Bin [31m0[m -> [32m28088[m bytes
+ bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll       |   Bin [31m0[m -> [32m4211112[m bytes
+ bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll    |   Bin [31m0[m -> [32m128432[m bytes
+ bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll  |   Bin [31m0[m -> [32m5061040[m bytes
+ bin/roslyn/Microsoft.CodeAnalysis.dll              |   Bin [31m0[m -> [32m2049432[m bytes
+ bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll |   Bin [31m0[m -> [32m1264912[m bytes
+ bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll   |   Bin [31m0[m -> [32m967432[m bytes
+ bin/roslyn/Microsoft.VisualBasic.Core.targets      |   142 [32m+[m
+ bin/roslyn/System.AppContext.dll                   |   Bin [31m0[m -> [32m20168[m bytes
+ bin/roslyn/System.Collections.Immutable.dll        |   Bin [31m0[m -> [32m200440[m bytes
+ bin/roslyn/System.Diagnostics.StackTrace.dll       |   Bin [31m0[m -> [32m22776[m bytes
+ bin/roslyn/System.IO.FileSystem.Primitives.dll     |   Bin [31m0[m -> [32m20736[m bytes
+ bin/roslyn/System.IO.FileSystem.dll                |   Bin [31m0[m -> [32m20696[m bytes
+ bin/roslyn/System.Reflection.Metadata.dll          |   Bin [31m0[m -> [32m425864[m bytes
+ bin/roslyn/VBCSCompiler.exe                        |   Bin [31m0[m -> [32m85896[m bytes
+ bin/roslyn/VBCSCompiler.exe.config                 |    36 [32m+[m
+ bin/roslyn/csc.exe                                 |   Bin [31m0[m -> [32m50032[m bytes
+ bin/roslyn/csc.exe.config                          |    31 [32m+[m
+ bin/roslyn/csc.rsp                                 |    46 [32m+[m
+ bin/roslyn/csi.exe                                 |   Bin [31m0[m -> [32m13680[m bytes
+ bin/roslyn/csi.rsp                                 |    13 [32m+[m
+ bin/roslyn/vbc.exe                                 |   Bin [31m0[m -> [32m50032[m bytes
+ bin/roslyn/vbc.exe.config                          |    31 [32m+[m
+ bin/roslyn/vbc.rsp                                 |    55 [32m+[m
+ imagenes/ABMProductos.png                          |   Bin [31m0[m -> [32m8858[m bytes
+ imagenes/ABMUsuarios.png                           |   Bin [31m0[m -> [32m23559[m bytes
+ imagenes/ADMControl.png                            |   Bin [31m0[m -> [32m25568[m bytes
+ imagenes/CancelarPedidoUs.png                      |   Bin [31m0[m -> [32m16762[m bytes
+ imagenes/CancelarYVolver1.png                      |   Bin [31m0[m -> [32m10710[m bytes
+ imagenes/Carrito80x80.png                          |   Bin [31m0[m -> [32m3033[m bytes
+ imagenes/EliminarAnulado.png                       |   Bin [31m0[m -> [32m27265[m bytes
+ imagenes/EliminarAnulado1.png                      |   Bin [31m0[m -> [32m27537[m bytes
+ imagenes/MisPedidos.png                            |   Bin [31m0[m -> [32m24756[m bytes
+ imagenes/NuevoPedido.png                           |   Bin [31m0[m -> [32m17714[m bytes
+ imagenes/PedidosUsuarios.png                       |   Bin [31m0[m -> [32m25650[m bytes
+ imagenes/Portada1.png                              |   Bin [31m0[m -> [32m29930[m bytes
+ imagenes/Quitarico.png                             |   Bin [31m0[m -> [32m1755[m bytes
+ imagenes/ReenviarClave.png                         |   Bin [31m0[m -> [32m10471[m bytes
+ imagenes/Registrateaqui1.png                       |   Bin [31m0[m -> [32m9291[m bytes
+ imagenes/ReservarUs.png                            |   Bin [31m0[m -> [32m19098[m bytes
+ imagenes/Tilde.png                                 |   Bin [31m0[m -> [32m2284[m bytes
+ imagenes/TildeIco.png                              |   Bin [31m0[m -> [32m3288[m bytes
+ imagenes/TildeIcob.png                             |   Bin [31m0[m -> [32m1349[m bytes
+ imagenes/VolverAPedido.png                         |   Bin [31m0[m -> [32m18189[m bytes
+ imagenes/VolveraTuArea.png                         |   Bin [31m0[m -> [32m25321[m bytes
+ imagenes/actualizar.png                            |   Bin [31m0[m -> [32m8825[m bytes
+ imagenes/add30x30.png                              |   Bin [31m0[m -> [32m3119[m bytes
+ imagenes/agregar.png                               |   Bin [31m0[m -> [32m4678[m bytes
+ imagenes/ahora_que_hago.png                        |   Bin [31m0[m -> [32m9102[m bytes
+ imagenes/cambiarlosdatos.png                       |   Bin [31m0[m -> [32m8830[m bytes
+ imagenes/cancelarpedido.png                        |   Bin [31m0[m -> [32m5561[m bytes
+ imagenes/cancelarvolver.png                        |   Bin [31m0[m -> [32m7044[m bytes
+ imagenes/cancelarvolver1.png                       |   Bin [31m0[m -> [32m3239[m bytes
+ imagenes/datospersonales.jpg                       |   Bin [31m0[m -> [32m15315[m bytes
+ imagenes/entrar1.png                               |   Bin [31m0[m -> [32m7967[m bytes
+ imagenes/hacerpedido.png                           |   Bin [31m0[m -> [32m10738[m bytes
+ imagenes/hacerpedido1.png                          |   Bin [31m0[m -> [32m3295[m bytes
+ imagenes/help.png                                  |   Bin [31m0[m -> [32m28501[m bytes
+ imagenes/modificardatos.png                        |   Bin [31m0[m -> [32m8347[m bytes
+ imagenes/modificardatos1.png                       |   Bin [31m0[m -> [32m3633[m bytes
+ imagenes/nuevopedido23.png                         |   Bin [31m0[m -> [32m4191[m bytes
+ imagenes/pedidosfabrica.png                        |   Bin [31m0[m -> [32m5109[m bytes
+ imagenes/portada.jpg                               |   Bin [31m0[m -> [32m33467[m bytes
+ imagenes/portada.png                               |   Bin [31m0[m -> [32m1052650[m bytes
+ imagenes/quitar.png                                |   Bin [31m0[m -> [32m2784[m bytes
+ imagenes/quitartodos.png                           |   Bin [31m0[m -> [32m3073[m bytes
+ imagenes/reenviarclave1.png                        |   Bin [31m0[m -> [32m14042[m bytes
+ imagenes/registrarse2.png                          |   Bin [31m0[m -> [32m9156[m bytes
+ imagenes/registrarsetitulo.png                     |   Bin [31m0[m -> [32m13310[m bytes
+ imagenes/registrarsetitulo1.png                    |   Bin [31m0[m -> [32m4713[m bytes
+ imagenes/registrate.png                            |   Bin [31m0[m -> [32m4866[m bytes
+ imagenes/registrateaqui.png                        |   Bin [31m0[m -> [32m14662[m bytes
+ imagenes/solicitar.png                             |   Bin [31m0[m -> [32m4483[m bytes
+ imagenes/terminar.png                              |   Bin [31m0[m -> [32m10594[m bytes
+ imagenes/terminarvolver.png                        |   Bin [31m0[m -> [32m10594[m bytes
+ imagenes/todook.png                                |   Bin [31m0[m -> [32m11409[m bytes
+ imagenes/todoslospedidos.png                       |   Bin [31m0[m -> [32m4142[m bytes
+ imagenes/vertodosmov.png                           |   Bin [31m0[m -> [32m9969[m bytes
+ imagenes/vertodosmov1.png                          |   Bin [31m0[m -> [32m3622[m bytes
+ imagenes/volveratuarea1.png                        |   Bin [31m0[m -> [32m3757[m bytes
+ imagenes/yaregistrado.png                          |   Bin [31m0[m -> [32m8459[m bytes
+ lib/twitter-bootstrap/css/bootstrap-grid.css       |  4124 [32m+++++++[m
+ lib/twitter-bootstrap/css/bootstrap-grid.css.map   |     1 [32m+[m
+ lib/twitter-bootstrap/css/bootstrap-grid.min.css   |     7 [32m+[m
+ .../css/bootstrap-grid.min.css.map                 |     1 [32m+[m
+ lib/twitter-bootstrap/css/bootstrap-grid.rtl.css   |  4123 [32m+++++++[m
+ .../css/bootstrap-grid.rtl.css.map                 |     1 [32m+[m
+ .../css/bootstrap-grid.rtl.min.css                 |     7 [32m+[m
+ .../css/bootstrap-grid.rtl.min.css.map             |     1 [32m+[m
+ lib/twitter-bootstrap/css/bootstrap-reboot.css     |   488 [32m+[m
+ lib/twitter-bootstrap/css/bootstrap-reboot.css.map |     1 [32m+[m
+ lib/twitter-bootstrap/css/bootstrap-reboot.min.css |     7 [32m+[m
+ .../css/bootstrap-reboot.min.css.map               |     1 [32m+[m
+ lib/twitter-bootstrap/css/bootstrap-reboot.rtl.css |   485 [32m+[m
+ .../css/bootstrap-reboot.rtl.css.map               |     1 [32m+[m
+ .../css/bootstrap-reboot.rtl.min.css               |     7 [32m+[m
+ .../css/bootstrap-reboot.rtl.min.css.map           |     1 [32m+[m
+ lib/twitter-bootstrap/css/bootstrap-utilities.css  |  4197 [32m+++++++[m
+ .../css/bootstrap-utilities.css.map                |     1 [32m+[m
+ .../css/bootstrap-utilities.min.css                |     7 [32m+[m
+ .../css/bootstrap-utilities.min.css.map            |     1 [32m+[m
+ .../css/bootstrap-utilities.rtl.css                |  4188 [32m+++++++[m
+ .../css/bootstrap-utilities.rtl.css.map            |     1 [32m+[m
+ .../css/bootstrap-utilities.rtl.min.css            |     7 [32m+[m
+ .../css/bootstrap-utilities.rtl.min.css.map        |     1 [32m+[m
+ lib/twitter-bootstrap/css/bootstrap.css            | 10880 [32m+++++++++++++++++++[m
+ lib/twitter-bootstrap/css/bootstrap.css.map        |     1 [32m+[m
+ lib/twitter-bootstrap/css/bootstrap.min.css        |     7 [32m+[m
+ lib/twitter-bootstrap/css/bootstrap.min.css.map    |     1 [32m+[m
+ lib/twitter-bootstrap/css/bootstrap.rtl.css        | 10840 [32m++++++++++++++++++[m
+ lib/twitter-bootstrap/css/bootstrap.rtl.css.map    |     1 [32m+[m
+ lib/twitter-bootstrap/css/bootstrap.rtl.min.css    |     7 [32m+[m
+ .../css/bootstrap.rtl.min.css.map                  |     1 [32m+[m
+ lib/twitter-bootstrap/js/bootstrap.bundle.js       |  7084 [32m++++++++++++[m
+ lib/twitter-bootstrap/js/bootstrap.bundle.js.map   |     1 [32m+[m
+ lib/twitter-bootstrap/js/bootstrap.bundle.min.js   |     7 [32m+[m
+ .../js/bootstrap.bundle.min.js.map                 |     1 [32m+[m
+ lib/twitter-bootstrap/js/bootstrap.esm.js          |  5211 [32m+++++++++[m
+ lib/twitter-bootstrap/js/bootstrap.esm.js.map      |     1 [32m+[m
+ lib/twitter-bootstrap/js/bootstrap.esm.min.js      |     7 [32m+[m
+ lib/twitter-bootstrap/js/bootstrap.esm.min.js.map  |     1 [32m+[m
+ lib/twitter-bootstrap/js/bootstrap.js              |  5258 [32m+++++++++[m
+ lib/twitter-bootstrap/js/bootstrap.js.map          |     1 [32m+[m
+ lib/twitter-bootstrap/js/bootstrap.min.js          |     7 [32m+[m
+ lib/twitter-bootstrap/js/bootstrap.min.js.map      |     1 [32m+[m
+ lib/twitter-bootstrap/scss/_accordion.scss         |   149 [32m+[m
+ lib/twitter-bootstrap/scss/_alert.scss             |    71 [32m+[m
+ lib/twitter-bootstrap/scss/_badge.scss             |    38 [32m+[m
+ lib/twitter-bootstrap/scss/_breadcrumb.scss        |    40 [32m+[m
+ lib/twitter-bootstrap/scss/_button-group.scss      |   142 [32m+[m
+ lib/twitter-bootstrap/scss/_buttons.scss           |   207 [32m+[m
+ lib/twitter-bootstrap/scss/_card.scss              |   234 [32m+[m
+ lib/twitter-bootstrap/scss/_carousel.scss          |   229 [32m+[m
+ lib/twitter-bootstrap/scss/_close.scss             |    40 [32m+[m
+ lib/twitter-bootstrap/scss/_containers.scss        |    41 [32m+[m
+ lib/twitter-bootstrap/scss/_dropdown.scss          |   249 [32m+[m
+ lib/twitter-bootstrap/scss/_forms.scss             |     9 [32m+[m
+ lib/twitter-bootstrap/scss/_functions.scss         |   302 [32m+[m
+ lib/twitter-bootstrap/scss/_grid.scss              |    33 [32m+[m
+ lib/twitter-bootstrap/scss/_helpers.scss           |    10 [32m+[m
+ lib/twitter-bootstrap/scss/_images.scss            |    42 [32m+[m
+ lib/twitter-bootstrap/scss/_list-group.scss        |   192 [32m+[m
+ lib/twitter-bootstrap/scss/_maps.scss              |    54 [32m+[m
+ lib/twitter-bootstrap/scss/_mixins.scss            |    43 [32m+[m
+ lib/twitter-bootstrap/scss/_modal.scss             |   237 [32m+[m
+ lib/twitter-bootstrap/scss/_nav.scss               |   172 [32m+[m
+ lib/twitter-bootstrap/scss/_navbar.scss            |   278 [32m+[m
+ lib/twitter-bootstrap/scss/_offcanvas.scss         |   144 [32m+[m
+ lib/twitter-bootstrap/scss/_pagination.scss        |   109 [32m+[m
+ lib/twitter-bootstrap/scss/_placeholders.scss      |    51 [32m+[m
+ lib/twitter-bootstrap/scss/_popover.scss           |   196 [32m+[m
+ lib/twitter-bootstrap/scss/_progress.scss          |    59 [32m+[m
+ lib/twitter-bootstrap/scss/_reboot.scss            |   610 [32m++[m
+ lib/twitter-bootstrap/scss/_root.scss              |    73 [32m+[m
+ lib/twitter-bootstrap/scss/_spinners.scss          |    85 [32m+[m
+ lib/twitter-bootstrap/scss/_tables.scss            |   164 [32m+[m
+ lib/twitter-bootstrap/scss/_toasts.scss            |    73 [32m+[m
+ lib/twitter-bootstrap/scss/_tooltip.scss           |   120 [32m+[m
+ lib/twitter-bootstrap/scss/_transitions.scss       |    27 [32m+[m
+ lib/twitter-bootstrap/scss/_type.scss              |   106 [32m+[m
+ lib/twitter-bootstrap/scss/_utilities.scss         |   647 [32m++[m
+ lib/twitter-bootstrap/scss/_variables.scss         |  1634 [32m+++[m
+ lib/twitter-bootstrap/scss/bootstrap-grid.scss     |    64 [32m+[m
+ lib/twitter-bootstrap/scss/bootstrap-reboot.scss   |     9 [32m+[m
+ .../scss/bootstrap-utilities.scss                  |    15 [32m+[m
+ lib/twitter-bootstrap/scss/bootstrap.scss          |    51 [32m+[m
+ .../scss/forms/_floating-labels.scss               |    75 [32m+[m
+ lib/twitter-bootstrap/scss/forms/_form-check.scss  |   175 [32m+[m
+ .../scss/forms/_form-control.scss                  |   194 [32m+[m
+ lib/twitter-bootstrap/scss/forms/_form-range.scss  |    91 [32m+[m
+ lib/twitter-bootstrap/scss/forms/_form-select.scss |    71 [32m+[m
+ lib/twitter-bootstrap/scss/forms/_form-text.scss   |    11 [32m+[m
+ lib/twitter-bootstrap/scss/forms/_input-group.scss |   132 [32m+[m
+ lib/twitter-bootstrap/scss/forms/_labels.scss      |    36 [32m+[m
+ lib/twitter-bootstrap/scss/forms/_validation.scss  |    12 [32m+[m
+ lib/twitter-bootstrap/scss/helpers/_clearfix.scss  |     3 [32m+[m
+ lib/twitter-bootstrap/scss/helpers/_color-bg.scss  |    10 [32m+[m
+ .../scss/helpers/_colored-links.scss               |    12 [32m+[m
+ lib/twitter-bootstrap/scss/helpers/_position.scss  |    36 [32m+[m
+ lib/twitter-bootstrap/scss/helpers/_ratio.scss     |    26 [32m+[m
+ lib/twitter-bootstrap/scss/helpers/_stacks.scss    |    15 [32m+[m
+ .../scss/helpers/_stretched-link.scss              |    15 [32m+[m
+ .../scss/helpers/_text-truncation.scss             |     7 [32m+[m
+ .../scss/helpers/_visually-hidden.scss             |     8 [32m+[m
+ lib/twitter-bootstrap/scss/helpers/_vr.scss        |     8 [32m+[m
+ lib/twitter-bootstrap/scss/mixins/_alert.scss      |    15 [32m+[m
+ lib/twitter-bootstrap/scss/mixins/_backdrop.scss   |    14 [32m+[m
+ lib/twitter-bootstrap/scss/mixins/_banner.scss     |     9 [32m+[m
+ .../scss/mixins/_border-radius.scss                |    78 [32m+[m
+ lib/twitter-bootstrap/scss/mixins/_box-shadow.scss |    18 [32m+[m
+ .../scss/mixins/_breakpoints.scss                  |   127 [32m+[m
+ lib/twitter-bootstrap/scss/mixins/_buttons.scss    |    70 [32m+[m
+ lib/twitter-bootstrap/scss/mixins/_caret.scss      |    64 [32m+[m
+ lib/twitter-bootstrap/scss/mixins/_clearfix.scss   |     9 [32m+[m
+ .../scss/mixins/_color-scheme.scss                 |     7 [32m+[m
+ lib/twitter-bootstrap/scss/mixins/_container.scss  |    11 [32m+[m
+ lib/twitter-bootstrap/scss/mixins/_deprecate.scss  |    10 [32m+[m
+ lib/twitter-bootstrap/scss/mixins/_forms.scss      |   152 [32m+[m
+ lib/twitter-bootstrap/scss/mixins/_gradients.scss  |    47 [32m+[m
+ lib/twitter-bootstrap/scss/mixins/_grid.scss       |   151 [32m+[m
+ lib/twitter-bootstrap/scss/mixins/_image.scss      |    16 [32m+[m
+ lib/twitter-bootstrap/scss/mixins/_list-group.scss |    24 [32m+[m
+ lib/twitter-bootstrap/scss/mixins/_lists.scss      |     7 [32m+[m
+ lib/twitter-bootstrap/scss/mixins/_pagination.scss |    10 [32m+[m
+ lib/twitter-bootstrap/scss/mixins/_reset-text.scss |    17 [32m+[m
+ lib/twitter-bootstrap/scss/mixins/_resize.scss     |     6 [32m+[m
+ .../scss/mixins/_table-variants.scss               |    24 [32m+[m
+ .../scss/mixins/_text-truncate.scss                |     8 [32m+[m
+ lib/twitter-bootstrap/scss/mixins/_transition.scss |    26 [32m+[m
+ lib/twitter-bootstrap/scss/mixins/_utilities.scss  |    97 [32m+[m
+ .../scss/mixins/_visually-hidden.scss              |    29 [32m+[m
+ lib/twitter-bootstrap/scss/utilities/_api.scss     |    47 [32m+[m
+ lib/twitter-bootstrap/scss/vendor/_rfs.scss        |   354 [32m+[m
+ libman.json                                        |    10 [32m+[m
+ ...NETFramework,Version=v4.5.AssemblyAttributes.vb |     7 [32m+[m
+ .../DesignTimeResolveAssemblyReferencesInput.cache |   Bin [31m0[m -> [32m22081[m bytes
+ obj/Debug/Sistema_VB_Backup.Resources.resources    |   Bin [31m0[m -> [32m180[m bytes
+ obj/Debug/Sistema_VB_Backup.dll                    |   Bin [31m0[m -> [32m114176[m bytes
+ obj/Debug/Sistema_VB_Backup.pdb                    |   Bin [31m0[m -> [32m99840[m bytes
+ ...istema_VB_Backup.vbproj.AssemblyReference.cache |   Bin [31m0[m -> [32m11[m bytes
+ ...istema_VB_Backup.vbproj.CoreCompileInputs.cache |     1 [32m+[m
+ .../Sistema_VB_Backup.vbproj.FileListAbsolute.txt  |    40 [32m+[m
+ ...Sistema_VB_Backup.vbproj.GenerateResource.cache |   Bin [31m0[m -> [32m954[m bytes
+ obj/Debug/Sistema_VB_Backup.xml                    |  2219 [32m++++[m
+ .../TempPE/My Project.Resources.Designer.vb.dll    |   Bin [31m0[m -> [32m6656[m bytes
+ packages.config                                    |     4 [32m+[m
+ .../.signature.p7s                                 |   Bin [31m0[m -> [32m22345[m bytes
+ ...om.Providers.DotNetCompilerPlatform.2.0.1.nupkg |   Bin [31m0[m -> [32m13709859[m bytes
+ ...oviders.DotNetCompilerPlatform.Extensions.props |     5 [32m+[m
+ ....CodeDom.Providers.DotNetCompilerPlatform.props |   111 [32m+[m
+ ...oviders.DotNetCompilerPlatform.Extensions.props |     5 [32m+[m
+ ....CodeDom.Providers.DotNetCompilerPlatform.props |   111 [32m+[m
+ .../content/net45/app.config.install.xdt           |    66 [32m+[m
+ .../content/net45/app.config.uninstall.xdt         |    29 [32m+[m
+ .../content/net45/web.config.install.xdt           |    58 [32m+[m
+ .../content/net45/web.config.uninstall.xdt         |    23 [32m+[m
+ .../content/net46/app.config.install.xdt           |    66 [32m+[m
+ .../content/net46/app.config.uninstall.xdt         |    29 [32m+[m
+ .../content/net46/web.config.install.xdt           |    58 [32m+[m
+ .../content/net46/web.config.uninstall.xdt         |    23 [32m+[m
+ ...ft.CodeDom.Providers.DotNetCompilerPlatform.dll |   Bin [31m0[m -> [32m40168[m bytes
+ ...ft.CodeDom.Providers.DotNetCompilerPlatform.xml |    67 [32m+[m
+ .../Microsoft.Build.Tasks.CodeAnalysis.dll         |   Bin [31m0[m -> [32m105392[m bytes
+ .../tools/Roslyn45/Microsoft.CSharp.Core.targets   |   145 [32m+[m
+ .../Microsoft.CodeAnalysis.CSharp.Scripting.dll    |   Bin [31m0[m -> [32m28088[m bytes
+ .../Roslyn45/Microsoft.CodeAnalysis.CSharp.dll     |   Bin [31m0[m -> [32m4211112[m bytes
+ .../Roslyn45/Microsoft.CodeAnalysis.Scripting.dll  |   Bin [31m0[m -> [32m128432[m bytes
+ .../Microsoft.CodeAnalysis.VisualBasic.dll         |   Bin [31m0[m -> [32m5061040[m bytes
+ .../tools/Roslyn45/Microsoft.CodeAnalysis.dll      |   Bin [31m0[m -> [32m2049432[m bytes
+ .../Microsoft.DiaSymReader.Native.amd64.dll        |   Bin [31m0[m -> [32m1264912[m bytes
+ .../Roslyn45/Microsoft.DiaSymReader.Native.x86.dll |   Bin [31m0[m -> [32m967432[m bytes
+ .../Roslyn45/Microsoft.VisualBasic.Core.targets    |   142 [32m+[m
+ .../tools/Roslyn45/System.AppContext.dll           |   Bin [31m0[m -> [32m20168[m bytes
+ .../Roslyn45/System.Collections.Immutable.dll      |   Bin [31m0[m -> [32m200440[m bytes
+ .../Roslyn45/System.Diagnostics.StackTrace.dll     |   Bin [31m0[m -> [32m22776[m bytes
+ .../Roslyn45/System.IO.FileSystem.Primitives.dll   |   Bin [31m0[m -> [32m20736[m bytes
+ .../tools/Roslyn45/System.IO.FileSystem.dll        |   Bin [31m0[m -> [32m20696[m bytes
+ .../tools/Roslyn45/System.Reflection.Metadata.dll  |   Bin [31m0[m -> [32m425864[m bytes
+ .../tools/Roslyn45/VBCSCompiler.exe                |   Bin [31m0[m -> [32m85896[m bytes
+ .../tools/Roslyn45/VBCSCompiler.exe.config         |    36 [32m+[m
+ .../tools/Roslyn45/csc.exe                         |   Bin [31m0[m -> [32m50032[m bytes
+ .../tools/Roslyn45/csc.exe.config                  |    31 [32m+[m
+ .../tools/Roslyn45/csc.rsp                         |    46 [32m+[m
+ .../tools/Roslyn45/csi.exe                         |   Bin [31m0[m -> [32m13680[m bytes
+ .../tools/Roslyn45/csi.rsp                         |    13 [32m+[m
+ .../tools/Roslyn45/vbc.exe                         |   Bin [31m0[m -> [32m50032[m bytes
+ .../tools/Roslyn45/vbc.exe.config                  |    31 [32m+[m
+ .../tools/Roslyn45/vbc.rsp                         |    55 [32m+[m
+ .../Microsoft.Build.Tasks.CodeAnalysis.dll         |   Bin [31m0[m -> [32m122288[m bytes
+ .../RoslynLatest/Microsoft.CSharp.Core.targets     |   135 [32m+[m
+ .../Microsoft.CodeAnalysis.CSharp.Scripting.dll    |   Bin [31m0[m -> [32m28592[m bytes
+ .../RoslynLatest/Microsoft.CodeAnalysis.CSharp.dll |   Bin [31m0[m -> [32m4896176[m bytes
+ .../Microsoft.CodeAnalysis.Scripting.dll           |   Bin [31m0[m -> [32m127920[m bytes
+ .../Microsoft.CodeAnalysis.VisualBasic.dll         |   Bin [31m0[m -> [32m5425584[m bytes
+ .../tools/RoslynLatest/Microsoft.CodeAnalysis.dll  |   Bin [31m0[m -> [32m2721712[m bytes
+ .../Microsoft.DiaSymReader.Native.amd64.dll        |   Bin [31m0[m -> [32m1495800[m bytes
+ .../Microsoft.DiaSymReader.Native.x86.dll          |   Bin [31m0[m -> [32m1188080[m bytes
+ .../RoslynLatest/Microsoft.Managed.Core.targets    |   155 [32m+[m
+ .../Microsoft.VisualBasic.Core.targets             |   132 [32m+[m
+ .../RoslynLatest/Microsoft.Win32.Primitives.dll    |   Bin [31m0[m -> [32m22768[m bytes
+ .../tools/RoslynLatest/System.AppContext.dll       |   Bin [31m0[m -> [32m20168[m bytes
+ .../RoslynLatest/System.Collections.Immutable.dll  |   Bin [31m0[m -> [32m358536[m bytes
+ .../tools/RoslynLatest/System.Console.dll          |   Bin [31m0[m -> [32m34496[m bytes
+ .../System.Diagnostics.DiagnosticSource.dll        |   Bin [31m0[m -> [32m35760[m bytes
+ .../System.Diagnostics.FileVersionInfo.dll         |   Bin [31m0[m -> [32m23464[m bytes
+ .../RoslynLatest/System.Diagnostics.StackTrace.dll |   Bin [31m0[m -> [32m23288[m bytes
+ .../System.Globalization.Calendars.dll             |   Bin [31m0[m -> [32m23296[m bytes
+ .../RoslynLatest/System.IO.Compression.ZipFile.dll |   Bin [31m0[m -> [32m24824[m bytes
+ .../tools/RoslynLatest/System.IO.Compression.dll   |   Bin [31m0[m -> [32m111984[m bytes
+ .../System.IO.FileSystem.Primitives.dll            |   Bin [31m0[m -> [32m22784[m bytes
+ .../tools/RoslynLatest/System.IO.FileSystem.dll    |   Bin [31m0[m -> [32m22736[m bytes
+ .../tools/RoslynLatest/System.Net.Http.dll         |   Bin [31m0[m -> [32m265048[m bytes
+ .../tools/RoslynLatest/System.Net.Sockets.dll      |   Bin [31m0[m -> [32m46280[m bytes
+ .../RoslynLatest/System.Reflection.Metadata.dll    |   Bin [31m0[m -> [32m584848[m bytes
+ ....Runtime.InteropServices.RuntimeInformation.dll |   Bin [31m0[m -> [32m33256[m bytes
+ .../System.Security.Cryptography.Algorithms.dll    |   Bin [31m0[m -> [32m39872[m bytes
+ .../System.Security.Cryptography.Encoding.dll      |   Bin [31m0[m -> [32m23480[m bytes
+ .../System.Security.Cryptography.Primitives.dll    |   Bin [31m0[m -> [32m22816[m bytes
+ ...stem.Security.Cryptography.X509Certificates.dll |   Bin [31m0[m -> [32m38872[m bytes
+ .../System.Text.Encoding.CodePages.dll             |   Bin [31m0[m -> [32m766872[m bytes
+ .../System.Threading.Tasks.Extensions.dll          |   Bin [31m0[m -> [32m25864[m bytes
+ .../tools/RoslynLatest/System.ValueTuple.dll       |   Bin [31m0[m -> [32m77672[m bytes
+ .../tools/RoslynLatest/System.Xml.ReaderWriter.dll |   Bin [31m0[m -> [32m23264[m bytes
+ .../RoslynLatest/System.Xml.XPath.XDocument.dll    |   Bin [31m0[m -> [32m25320[m bytes
+ .../tools/RoslynLatest/System.Xml.XPath.dll        |   Bin [31m0[m -> [32m22720[m bytes
+ .../tools/RoslynLatest/System.Xml.XmlDocument.dll  |   Bin [31m0[m -> [32m23256[m bytes
+ .../tools/RoslynLatest/VBCSCompiler.exe            |   Bin [31m0[m -> [32m87472[m bytes
+ .../tools/RoslynLatest/VBCSCompiler.exe.config     |   148 [32m+[m
+ .../tools/RoslynLatest/csc.exe                     |   Bin [31m0[m -> [32m49584[m bytes
+ .../tools/RoslynLatest/csc.exe.config              |   143 [32m+[m
+ .../tools/RoslynLatest/csc.rsp                     |    46 [32m+[m
+ .../tools/RoslynLatest/csi.exe                     |   Bin [31m0[m -> [32m15272[m bytes
+ .../tools/RoslynLatest/csi.exe.config              |   153 [32m+[m
+ .../tools/RoslynLatest/csi.rsp                     |    14 [32m+[m
+ .../tools/RoslynLatest/vbc.exe                     |   Bin [31m0[m -> [32m49584[m bytes
+ .../tools/RoslynLatest/vbc.exe.config              |   143 [32m+[m
+ .../tools/RoslynLatest/vbc.rsp                     |    55 [32m+[m
+ .../tools/net45/install.ps1                        |   271 [32m+[m
+ .../tools/net45/uninstall.ps1                      |   215 [32m+[m
+ 349 files changed, 86961 insertions(+)
